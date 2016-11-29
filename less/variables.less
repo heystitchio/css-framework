@@ -14,7 +14,7 @@
 @gray-light:             lighten(@gray-base, 46.7%); // #777
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
-@brand-primary:          rgb(38, 195, 235);
+@brand-primary:          rgb(51, 153, 255);
 @brand-success:          rgb(119, 193, 75);
 @brand-info:             rgb(116, 141, 163);
 @brand-warning:          rgb(245, 215, 110);
@@ -78,9 +78,9 @@
 //** Load fonts from this directory.
 @icon-font-path:          "../fonts/";
 //** File name for all font files.
-@icon-font-name:          "glyphicons-halflings-regular";
+@icon-font-name:          "stitch";
 //** Element ID within SVG icon file.
-@icon-font-svg-id:        "glyphicons_halflingsregular";
+@icon-font-svg-id:        "stitch";
 
 
 //== Components
@@ -104,7 +104,7 @@
 
 @border-radius-base:        4px;
 @border-radius-large:       6px;
-@border-radius-small:       2px;
+@border-radius-small:       3px;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    rgb(255, 255, 255);
@@ -160,7 +160,7 @@
 @btn-info-bg:                    @brand-info;
 @btn-info-border:                darken(@btn-info-bg, 5%);
 
-@btn-warning-color:              rgb(255, 255, 255);
+@btn-warning-color:              @text-color;
 @btn-warning-bg:                 @brand-warning;
 @btn-warning-border:             darken(@btn-warning-bg, 5%);
 
@@ -370,7 +370,7 @@
 
 // Navbar links
 @navbar-default-link-color:                @headings-color;
-@navbar-default-link-hover-color:          darken(@navbar-default-link-color, 12%);
+@navbar-default-link-hover-color:          @brand-primary;
 @navbar-default-link-hover-bg:             transparent;
 @navbar-default-link-active-color:         @brand-primary;
 @navbar-default-link-active-bg:            transparent;
@@ -396,7 +396,7 @@
 
 // Inverted navbar links
 @navbar-inverse-link-color:                 rgb(255, 255, 255);
-@navbar-inverse-link-hover-color:           darken(@navbar-inverse-link-color, 8%);
+@navbar-inverse-link-hover-color:           @brand-primary;
 @navbar-inverse-link-hover-bg:              transparent;
 @navbar-inverse-link-active-color:          @brand-primary;
 @navbar-inverse-link-active-bg:             transparent;
@@ -431,7 +431,7 @@
 @nav-tabs-link-hover-border-color:          @gray-lighter;
 
 @nav-tabs-active-link-hover-bg:             @body-bg;
-@nav-tabs-active-link-hover-color:          @gray;
+@nav-tabs-active-link-hover-color:          @brand-primary;
 @nav-tabs-active-link-hover-border-color:   rgb(221, 221, 221);
 
 @nav-tabs-justified-link-border-color:            rgb(221, 221, 221);

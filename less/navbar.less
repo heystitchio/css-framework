@@ -16,10 +16,6 @@
 
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
-
-  @media (min-width: @grid-float-breakpoint) {
-    border-radius: @navbar-border-radius;
-  }
 }
 
 
@@ -236,6 +232,19 @@
     padding-top:    10px;
     padding-bottom: 10px;
     line-height: @line-height-computed;
+    font-weight: 600;
+    &:hover,
+    &:focus {
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        height: 2px;
+        width: ~'calc(100% - 30px)';
+        background: @brand-primary;
+      }
+    }
   }
 
   @media (max-width: @grid-float-breakpoint-max) {
@@ -325,14 +334,11 @@
 
 // Menu position and menu carets
 .navbar-nav > li > .dropdown-menu {
-  margin-top: 0;
-  .border-top-radius(0);
+  margin-top: -8px;
 }
 // Menu position and menu caret support for dropups via extra dropup class
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
-  margin-bottom: 0;
-  .border-top-radius(@navbar-border-radius);
-  .border-bottom-radius(0);
+  margin-bottom: -8px;
 }
 
 
@@ -411,6 +417,7 @@
 
   .navbar-nav {
     > li > a {
+      position: relative;
       color: @navbar-default-link-color;
 
       &:hover,
@@ -456,6 +463,12 @@
   // Dropdown menu items
   .navbar-nav {
     // Remove background color from open dropdown
+    .dropdown-toggle {
+      &:before {
+        display: none;
+      }
+    }
+
     > .open > a {
       &,
       &:hover,

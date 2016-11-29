@@ -82,25 +82,24 @@
 
     // Actual tabs (as links)
     > a {
-      margin-right: 2px;
+      margin: 0 15px;
+      padding: 10px 0;
+      color: @text-color;
       line-height: @line-height-base;
-      border: 1px solid transparent;
       border-radius: @border-radius-base @border-radius-base 0 0;
       &:hover {
-        border-color: @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-border-color;
+        color: rgb(0, 0, 0);
+        .box-shadow(inset 0px -2px 0px 0px @gray-light);
       }
     }
 
     // Active state, and its :hover to override normal :hover
     &.active > a {
       &,
-      &:hover,
       &:focus {
         color: @nav-tabs-active-link-hover-color;
-        background-color: @nav-tabs-active-link-hover-bg;
-        border: 1px solid @nav-tabs-active-link-hover-border-color;
-        border-bottom-color: transparent;
         cursor: default;
+        .box-shadow(inset 0px -2px 0px 0px @brand-primary);
       }
     }
   }
@@ -120,7 +119,13 @@
 
     // Links rendered as pills
     > a {
+      color: @text-color;
+      padding: @padding-base-vertical @padding-base-horizontal;
       border-radius: @nav-pills-border-radius;
+      &:hover {
+        color: rgb(0, 0, 0);
+        background: @dropdown-link-hover-bg;
+      }
     }
     + li {
       margin-left: 2px;
@@ -196,12 +201,6 @@
     border-radius: @border-radius-base;
   }
 
-  > .active > a,
-  > .active > a:hover,
-  > .active > a:focus {
-    border: 1px solid @nav-tabs-justified-link-border-color;
-  }
-
   @media (min-width: @screen-sm-min) {
     > li > a {
       border-bottom: 1px solid @nav-tabs-justified-link-border-color;
@@ -234,9 +233,34 @@
 // -------------------------
 
 // Specific dropdowns
-.nav-tabs .dropdown-menu {
-  // make dropdown border overlap tab border
-  margin-top: -1px;
-  // Remove the top rounded corners here since there is a hard edge above the menu
-  .border-top-radius(0);
+.nav-tabs .dropdown {
+  .dropdown-toggle {
+    &:hover,
+    &:active,
+    &:focus {
+      color: @link-color;
+      .box-shadow(none);
+    }
+  }
+  .dropdown-menu {
+    margin-top: -1px;
+  }
+}
+
+.nav-pills .dropdown {
+  .dropdown-toggle {
+    &:hover,
+    &:active,
+    &:focus {
+      color: @link-color;
+      .box-shadow( inset 0px 0px 0px 1px @link-color);
+    }
+    &:hover {
+      background: transparent;
+    }
+    &:active,
+    &:focus {
+      background: @dropdown-link-hover-bg;
+    }
+  }
 }

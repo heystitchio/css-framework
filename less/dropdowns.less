@@ -23,8 +23,16 @@
 }
 
 // Prevent the focus on the dropdown toggle when closing dropdowns
-.dropdown-toggle:focus {
-  outline: 0;
+.dropdown-toggle {
+  padding: 6px 12px 6px 15px;
+  &:focus {
+    outline: 0;
+  }
+  .icon-angle-down {
+    line-height: 1em;
+    font-size: 1.1em;
+    vertical-align: sub;
+  }
 }
 
 // The dropdown menu (ul)
@@ -33,10 +41,12 @@
   top: 100%;
   left: 0;
   z-index: @zindex-dropdown;
-  display: none; // none by default, but block on "open" of the menu
+  display: block;
+  visibility: hidden;
+  opacity: 0;
   float: left;
   min-width: 160px;
-  padding: 12px 8px;
+  padding: 12px 5px;
   margin: 2px 0 0; // override default ul
   list-style: none;
   font-size: @font-size-base;
@@ -47,7 +57,7 @@
   border-radius: @border-radius-base;
   .box-shadow(0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24););
   background-clip: padding-box;
-  .translate(0, 10px);
+  .translate(0, -6px);
   .transition(all 0.3s ease-out);
 
   &:before,
@@ -64,8 +74,8 @@
 
   &:before {
     border-color: rgba(221, 221, 221, 0);
-    border-bottom-color: #ddd;
-    border-bottom-color: rgba(0, 0, 0, 0.08);
+    border-bottom-color: #aaa;
+    border-bottom-color: rgba(0, 0, 0, 0.15);
     border-width: 8px;
     margin-left: -8px;
   }
@@ -98,7 +108,7 @@
     font-weight: normal;
     line-height: @line-height-base;
     color: @dropdown-link-color;
-    border-radius: @border-radius-base;
+    border-radius: @btn-border-radius-small;
     white-space: nowrap; // prevent links from randomly breaking onto new lines
   }
 }
@@ -147,20 +157,6 @@
   }
 }
 
-// Open state for the dropdown
-.open {
-  // Show the menu
-  > .dropdown-menu {
-    display: block;
-    .translate(0, 0);
-  }
-
-  // Remove the outline when :focus is triggered
-  > a {
-    outline: 0;
-  }
-}
-
 // Menu positioning
 //
 // Add extra class to `.dropdown-menu` to flip the alignment of the dropdown
@@ -196,10 +192,14 @@
 .dropdown-header {
   display: block;
   padding: 3px 10px;
-  font-size: @font-size-small;
+  font-size: 10px;
   line-height: @line-height-base;
-  color: @dropdown-header-color;
+  color: @brand-primary;
+  text-transform: uppercase;
   white-space: nowrap; // as with > li > a
+  &:not(:first-child) {
+    margin-top: 4px;
+  }
 }
 
 // Backdrop to catch body clicks on mobile, etc.
@@ -243,7 +243,7 @@
     top: auto;
     bottom: 100%;
     margin-bottom: 2px;
-    .translate(0, -10px);
+    .translate(0, 6px);
 
     &:after,
     &:before {
@@ -264,6 +264,20 @@
   }
 }
 
+// Open state for the dropdown
+.open {
+  // Show the menu
+  > .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    .translate(0, 0);
+  }
+
+  // Remove the outline when :focus is triggered
+  > a {
+    outline: 0;
+  }
+}
 
 // Component alignment
 //
