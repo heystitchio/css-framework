@@ -574,13 +574,13 @@ fieldset[disabled] .btn-danger.active {
   background-repeat: repeat-x;
 }
 .well {
-  background-image: -webkit-linear-gradient(top, #e3e3e3 0%, #f0f0f0 100%);
-  background-image:      -o-linear-gradient(top, #e3e3e3 0%, #f0f0f0 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e3e3e3), to(#f0f0f0));
-  background-image:         linear-gradient(to bottom, #e3e3e3 0%, #f0f0f0 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe3e3e3', endColorstr='#fff0f0f0', GradientType=0);
+  background-image: -webkit-linear-gradient(top, #f2f2f2 0%, #fff 100%);
+  background-image:      -o-linear-gradient(top, #f2f2f2 0%, #fff 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#fff));
+  background-image:         linear-gradient(to bottom, #f2f2f2 0%, #fff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff2f2f2', endColorstr='#ffffffff', GradientType=0);
   background-repeat: repeat-x;
-  border-color: #d7d7d7;
+  border-color: #e6e6e6;
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05), 0 1px 0 rgba(255, 255, 255, .1);
           box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05), 0 1px 0 rgba(255, 255, 255, .1);
 }

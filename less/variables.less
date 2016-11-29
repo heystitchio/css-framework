@@ -135,7 +135,7 @@
 @table-bg-active:               @table-bg-hover;
 
 //** Border color for table and cell borders.
-@table-border-color:            rgb(221, 221, 221);
+@table-border-color:            rgb(238, 238, 238);
 
 
 //== Buttons
@@ -216,10 +216,10 @@
 @form-group-margin-bottom:       12px;
 
 @legend-color:                   @headings-color;
-@legend-border-color:            rgb(221, 221, 221);
+@legend-border-color:            rgb(238, 238, 238);
 
 //** Background color for textual input addons
-@input-group-addon-bg:           @gray-lighter;
+@input-group-addon-bg:           rgb(238, 238, 238);
 //** Border color for textual input addons
 @input-group-addon-border-color: @input-border;
 
@@ -236,9 +236,9 @@
 //** Dropdown menu `border-color`.
 @dropdown-border:                rgba(0,0,0,.08);
 //** Dropdown menu `border-color` **for IE8**.
-@dropdown-fallback-border:       rgb(221, 221, 221);
+@dropdown-fallback-border:       rgb(238, 238, 238);
 //** Divider color for between dropdown items.
-@dropdown-divider-bg:            rgb(221, 221, 221);
+@dropdown-divider-bg:            rgb(238, 238, 238);
 
 //** Dropdown link text color.
 @dropdown-link-color:            @text-color;
@@ -366,7 +366,7 @@
 
 @navbar-default-color:             @headings-color;
 @navbar-default-bg:                rgb(255, 255, 255);
-@navbar-default-border:            rgb(221, 221, 221);
+@navbar-default-border:            rgb(238, 238, 238);
 
 // Navbar links
 @navbar-default-link-color:                @headings-color;
@@ -383,9 +383,9 @@
 @navbar-default-brand-hover-bg:            transparent;
 
 // Navbar toggle
-@navbar-default-toggle-hover-bg:           rgb(221, 221, 221);
+@navbar-default-toggle-hover-bg:           rgb(238, 238, 238);
 @navbar-default-toggle-icon-bar-bg:        rgb(136,136,136);
-@navbar-default-toggle-border-color:       rgb(221, 221, 221);
+@navbar-default-toggle-border-color:       rgb(238, 238, 238);
 
 
 //=== Inverted navbar
@@ -426,15 +426,15 @@
 @nav-disabled-link-hover-color:             @gray-light;
 
 //== Tabs
-@nav-tabs-border-color:                     rgb(221, 221, 221);
+@nav-tabs-border-color:                     rgb(238, 238, 238);
 
 @nav-tabs-link-hover-border-color:          @gray-lighter;
 
 @nav-tabs-active-link-hover-bg:             @body-bg;
 @nav-tabs-active-link-hover-color:          @brand-primary;
-@nav-tabs-active-link-hover-border-color:   rgb(221, 221, 221);
+@nav-tabs-active-link-hover-border-color:   rgb(238, 238, 238);
 
-@nav-tabs-justified-link-border-color:            rgb(221, 221, 221);
+@nav-tabs-justified-link-border-color:            rgb(238, 238, 238);
 @nav-tabs-justified-active-link-border-color:     @body-bg;
 
 //== Pills
@@ -447,13 +447,13 @@
 //
 //##
 
-@pagination-color:                     @link-color;
+@pagination-color:                     @text-color;
 @pagination-bg:                        rgb(255, 255, 255);
-@pagination-border:                    rgb(221, 221, 221);
+@pagination-border:                    rgb(238, 238, 238);
 
-@pagination-hover-color:               @link-hover-color;
-@pagination-hover-bg:                  rgb(240, 240, 240);
-@pagination-hover-border:              rgb(221, 221, 221);
+@pagination-hover-color:               @link-color;
+@pagination-hover-bg:                  rgb(255, 255, 255);
+@pagination-hover-border:              @link-color;
 
 @pagination-active-color:              rgb(255, 255, 255);
 @pagination-active-bg:                 @brand-primary;
@@ -461,18 +461,21 @@
 
 @pagination-disabled-color:            @gray-light;
 @pagination-disabled-bg:               rgb(255, 255, 255);
-@pagination-disabled-border:           rgb(221, 221, 221);
+@pagination-disabled-border:           rgb(238, 238, 238);
 
 
 //== Pager
 //
 //##
 
+@pager-color:                          @pagination-color;
 @pager-bg:                             @pagination-bg;
 @pager-border:                         @pagination-border;
 @pager-border-radius:                  @border-radius-base;
 
+@pager-hover-color:                    @pagination-hover-color;
 @pager-hover-bg:                       @pagination-hover-bg;
+@pager-hover-border:                   @pagination-hover-border;
 
 @pager-active-bg:                      @pagination-active-bg;
 @pager-active-color:                   @pagination-active-color;
@@ -565,7 +568,7 @@
 //##
 
 //** Default label background color
-@label-default-bg:            rgb(200, 200, 200);
+@label-default-bg:            rgb(221, 221, 221);
 //** Primary label background color
 @label-primary-bg:            @brand-primary;
 //** Success label background color
@@ -671,7 +674,7 @@
 //** Background color on `.list-group-item`
 @list-group-bg:                 rgb(255, 255, 255);
 //** `.list-group-item` border color
-@list-group-border:             rgb(221, 221, 221);
+@list-group-border:             rgb(238, 238, 238);
 //** List group border radius
 @list-group-border-radius:      @border-radius-base;
 
@@ -709,11 +712,11 @@
 @panel-border-radius:         @border-radius-base;
 
 //** Border color for elements within panels
-@panel-inner-border:          rgb(221, 221, 221);
+@panel-inner-border:          rgb(238, 238, 238);
 @panel-footer-bg:             rgb(240, 240, 240);
 
 @panel-default-text:          @gray-dark;
-@panel-default-border:        rgb(221, 221, 221);
+@panel-default-border:        rgb(238, 238, 238);
 @panel-default-heading-bg:    rgb(240, 240, 240);
 
 @panel-primary-text:          rgb(255, 255, 255);
@@ -746,7 +749,7 @@
 //** Thumbnail background color
 @thumbnail-bg:                @body-bg;
 //** Thumbnail border color
-@thumbnail-border:            rgb(221, 221, 221);
+@thumbnail-border:            rgb(238, 238, 238);
 //** Thumbnail border radius
 @thumbnail-border-radius:     @border-radius-base;
 
@@ -760,8 +763,8 @@
 //
 //##
 
-@well-bg:                     rgb(240, 240, 240);
-@well-border:                 rgb(221, 221, 221);
+@well-bg:                     rgb(255, 255, 255);
+@well-border:                 rgb(238, 238, 238);
 
 
 //== Badges
@@ -771,7 +774,7 @@
 @badge-color:                 rgb(255, 255, 255);
 //** Linked badge text color on hover
 @badge-link-hover-color:      rgb(255, 255, 255);
-@badge-bg:                    rgb(200, 200, 200);
+@badge-bg:                    rgb(221, 221, 221);
 
 //** Badge text color in active nav link
 @badge-active-color:          @link-color;
@@ -794,7 +797,7 @@
 //** Breadcrumb text color
 @breadcrumb-color:              rgb(204, 204, 204);
 //** Text color of current page in the breadcrumb
-@breadcrumb-active-color:       @gray-light;
+@breadcrumb-active-color:       @link-color;
 //** Textual separator for between breadcrumb elements
 @breadcrumb-separator:          "/";
 
@@ -866,4 +869,4 @@
 //** Point at which .dl-horizontal becomes horizontal
 @dl-horizontal-breakpoint:    @grid-float-breakpoint;
 //** Horizontal line color.
-@hr-border:                   rgb(221, 221, 221);
+@hr-border:                   rgb(238, 238, 238);
