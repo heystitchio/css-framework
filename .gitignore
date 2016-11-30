@@ -3,6 +3,9 @@ _gh_pages
 _site
 .ruby-version
 
+# Distribution files
+/dist/*
+
 # Numerous always-ignore extensions
 *.diff
 *.err
