@@ -54,7 +54,7 @@
 
   &.in {
     overflow-y: auto;
-    
+
     li a {
       &:before {
         display: none!important;
@@ -165,9 +165,15 @@
 .navbar-brand {
   float: left;
   padding: @navbar-padding-vertical @navbar-padding-horizontal;
-  font-size: @font-size-large;
+  font-family: 'Nexa';
+  font-size: 20px;
+  font-weight: 800;
   line-height: @line-height-computed;
   height: @navbar-height;
+
+  &:after {
+    font-weight: 300;
+  }
 
   &:hover,
   &:focus {
