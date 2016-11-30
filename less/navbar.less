@@ -164,15 +164,20 @@
 
 .navbar-brand {
   float: left;
-  padding: @navbar-padding-vertical @navbar-padding-horizontal;
+  padding: 15px @navbar-padding-horizontal;
   font-family: 'Nexa';
   font-size: 20px;
   font-weight: 800;
   line-height: @line-height-computed;
   height: @navbar-height;
 
-  &:after {
-    font-weight: 300;
+  span {
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle;
+    &:after {
+      font-weight: 300;
+    }
   }
 
   &:hover,
@@ -181,7 +186,9 @@
   }
 
   > img {
-    display: block;
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
   }
 
   @media (min-width: @grid-float-breakpoint) {
