@@ -918,6 +918,10 @@ h1[id] {
   width: auto;
 }
 
+.bs-example .card {
+  max-width: 320px;
+}
+
 /* Tweak content of examples for optimum awesome */
 .bs-example > p:last-child,
 .bs-example > ul:last-child,

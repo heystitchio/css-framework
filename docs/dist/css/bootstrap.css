@@ -4,8 +4,32 @@
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+.card-inverse {
+  color: rgba(255, 255, 255, .65);
+}
+.card-inverse .card-header,
+.card-inverse .card-footer {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, .2);
+}
+.card-inverse .card-header,
+.card-inverse .card-footer,
+.card-inverse .card-title,
+.card-inverse .card-blockquote {
+  color: #fff;
+}
+.card-inverse .card-link,
+.card-inverse .card-text,
+.card-inverse .card-subtitle,
+.card-inverse .card-blockquote .blockquote-footer {
+  color: rgba(255, 255, 255, .65);
+}
+.card-inverse .card-link:hover,
+.card-inverse .card-link:focus {
+  color: #39f;
+}
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -4886,6 +4910,253 @@ a.badge:focus {
 }
 .nav-pills > li > a > .badge {
   margin-left: 3px;
+}
+.card {
+  position: relative;
+  display: block;
+  margin-bottom: 9px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  -webkit-transition: all .3s ease-out;
+       -o-transition: all .3s ease-out;
+          transition: all .3s ease-out;
+}
+.card:hover {
+  border-color: #eee;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+          box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+}
+.card-block {
+  padding: 15px;
+}
+.card-title {
+  margin-bottom: 9px;
+}
+.card-subtitle {
+  margin-top: -(9px / 2);
+  margin-bottom: 0;
+}
+.card-text:last-child {
+  margin-bottom: 0;
+}
+.card-link .hover {
+  text-decoration: none;
+}
+.card-link + .card-link {
+  margin-left: 15px;
+}
+.card > .list-group:first-child .list-group-item:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.card > .list-group:last-child .list-group-item:last-child {
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.img-fluid {
+  width: 100%;
+}
+.card-header {
+  padding: 9px 15px;
+  margin-bottom: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.card-header:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.card-footer {
+  padding: 9px 15px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+.card-footer:last-child {
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.card-header-tabs {
+  margin-right: -(15px / 2);
+  margin-bottom: -(9px);
+  margin-left: -(15px / 2);
+  border-bottom: 0;
+}
+.card-header-pills {
+  margin-right: -(15px / 2);
+  margin-left: -(15px / 2);
+}
+.card-primary {
+  background-color: #39f;
+  border-color: #39f;
+}
+.card-primary .card-header,
+.card-primary .card-footer {
+  background-color: transparent;
+}
+.card-success {
+  background-color: #77c14b;
+  border-color: #77c14b;
+}
+.card-success .card-header,
+.card-success .card-footer {
+  background-color: transparent;
+}
+.card-info {
+  background-color: #748da3;
+  border-color: #748da3;
+}
+.card-info .card-header,
+.card-info .card-footer {
+  background-color: transparent;
+}
+.card-warning {
+  background-color: #f5d76e;
+  border-color: #f5d76e;
+}
+.card-warning .card-header,
+.card-warning .card-footer {
+  background-color: transparent;
+}
+.card-danger {
+  background-color: #ee3f4a;
+  border-color: #ee3f4a;
+}
+.card-danger .card-header,
+.card-danger .card-footer {
+  background-color: transparent;
+}
+.card-outline-primary {
+  background-color: transparent;
+  border-color: #39f;
+}
+.card-outline-info {
+  background-color: transparent;
+  border-color: #748da3;
+}
+.card-outline-success {
+  background-color: transparent;
+  border-color: #77c14b;
+}
+.card-outline-warning {
+  background-color: transparent;
+  border-color: #f5d76e;
+}
+.card-outline-danger {
+  background-color: transparent;
+  border-color: #ee3f4a;
+}
+.card-inverse {
+  color: rgba(255, 255, 255, .65);
+}
+.card-inverse .card-header,
+.card-inverse .card-footer {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, .2);
+}
+.card-inverse .card-header,
+.card-inverse .card-footer,
+.card-inverse .card-title,
+.card-inverse .card-blockquote {
+  color: #fff;
+}
+.card-inverse .card-link,
+.card-inverse .card-text,
+.card-inverse .card-subtitle,
+.card-inverse .card-blockquote .blockquote-footer {
+  color: rgba(255, 255, 255, .65);
+}
+.card-inverse .card-link:hover,
+.card-inverse .card-link:focus {
+  color: #39f;
+}
+.card-blockquote {
+  padding: 0;
+  margin-bottom: 0;
+  border-left: 0;
+}
+.card-img {
+  border-radius: 4px;
+}
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 9px;
+}
+.card-img-top {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.card-img-bottom {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+@media (min-width: 768px) {
+  .card-deck {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+    margin-right: -15px;
+    margin-bottom: .75rem;
+    margin-left: -15px;
+
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .card-deck .card {
+    margin-right: 15px;
+    margin-bottom: 0;
+    margin-left: 15px;
+
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 0;
+        -ms-flex: 1 0 0;
+            flex: 1 0 0;
+  }
+}
+@media (min-width: 768px) {
+  .card-group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .card-group .card {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 0;
+        -ms-flex: 1 0 0;
+            flex: 1 0 0;
+  }
+  .card-group .card + .card {
+    margin-left: 0;
+    border-left: 0;
+  }
+  .card-group .card:not(:first-child):not(:last-child) {
+    border-radius: 0;
+  }
+}
+@media (min-width: 768px) {
+  .card-columns {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+    -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
+            column-gap: 15px;
+  }
+  .card-columns .card {
+    display: inline-block;
+    width: 100%;
+  }
 }
 .jumbotron {
   padding-top: 18px;

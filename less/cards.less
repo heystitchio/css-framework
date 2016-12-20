@@ -9,10 +9,15 @@
 .card {
   position: relative;
   display: block;
-  margin-bottom: @padding-large-vertical;
-  background-color: @body-bg;
+  margin-bottom: @card-margin-bottom;
+  background-color: @card-bg;
   border: 1px solid rgb(221, 221, 221);
-  .border-radius(@border-radius-large);
+  border-radius: @card-border-radius;
+  .transition(all 0.3s ease-out);
+  &:hover {
+    border-color: rgb(238,238,238);
+    .box-shadow(~'0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)');
+  }
 }
 
 .card-block {
@@ -56,6 +61,10 @@
   }
 }
 
+.img-fluid {
+  width: 100%;
+}
+
 
 // Optional textual caps
 // -------------------------
@@ -67,7 +76,7 @@
   border-bottom: 1px solid rgb(221, 221, 221);
 
   &:first-child {
-    .border-radius(@border-radius-base @border-radius-base 0 0);
+    .border-top-radius(@border-radius-large);
   }
 }
 
@@ -77,7 +86,7 @@
   border-top: 1px solid rgb(221, 221, 221);
 
   &:last-child {
-    .border-radius(0 0 @border-radius-base @border-radius-base);
+    .border-bottom-radius(@border-radius-large);
   }
 }
 
@@ -102,38 +111,38 @@
 // -------------------------
 
 .card-primary {
-  .card-variant(@brand-primary, @brand-primary);
+  .card-variant(@card-brand-bg, @card-brand-border, @card-brand-text);
 }
 .card-success {
-  .card-variant(@brand-success, @brand-success);
+  .card-variant(@card-success-bg, @card-success-border, @card-success-text);
 }
 .card-info {
-  .card-variant(@brand-info, @brand-info);
+  .card-variant(@card-info-bg, @card-info-border, @card-info-text);
 }
 .card-warning {
-  .card-variant(@brand-warning, @brand-warning);
+  .card-variant(@card-warning-bg, @card-warning-border, @card-warning-text);
 }
 .card-danger {
-  .card-variant(@brand-danger, @brand-danger);
+  .card-variant(@card-danger-bg, @card-danger-border, @card-danger-text);
 }
 
 // Remove all backgrounds
 // -------------------------
 
 .card-outline-primary {
-  .card-outline-variant(@btn-primary-bg);
+  .card-outline-variant(@card-primary-border);
 }
 .card-outline-info {
-  .card-outline-variant(@btn-info-bg);
+  .card-outline-variant(@card-info-border);
 }
 .card-outline-success {
-  .card-outline-variant(@btn-success-bg);
+  .card-outline-variant(@card-success-border);
 }
 .card-outline-warning {
-  .card-outline-variant(@btn-warning-bg);
+  .card-outline-variant(@card-warning-border);
 }
 .card-outline-danger {
-  .card-outline-variant(@btn-danger-bg);
+  .card-outline-variant(@card-danger-border);
 }
 
 // Inverse text within a card for use with dark backgrounds
@@ -155,7 +164,7 @@
 
 // Card image
 .card-img {
-  .border-radius(@border-radius-base);
+  border-radius: @border-radius-base;
 }
 .card-img-overlay {
   position: absolute;
@@ -185,19 +194,19 @@
 //
 // Those changes are noted by `// Margin balancing`.
 
-@media(min-width: @screen-sm) {
+@media (min-width: @grid-float-breakpoint) {
   .card-deck {
     display: flex;
     flex-flow: row wrap;
-    margin-right: -$card-deck-margin;
-    margin-bottom: $card-spacer-y; // Margin balancing
-    margin-left: -$card-deck-margin;
+    margin-right: -@padding-base-horizontal;
+    margin-bottom: 0.75rem; // Margin balancing
+    margin-left: -@padding-base-horizontal;
 
     .card {
       flex: 1 0 0;
-      margin-right: $card-deck-margin;
+      margin-right: @padding-base-horizontal;
       margin-bottom: 0; // Margin balancing
-      margin-left: $card-deck-margin;
+      margin-left: @padding-base-horizontal;
     }
   }
 }
@@ -207,7 +216,7 @@
 // Card groups
 // -------------------------
 
-@media(min-width: @screen-sm) {
+@media (min-width: @grid-float-breakpoint) {
   .card-group {
     display: flex;
     flex-flow: row wrap;
@@ -219,15 +228,19 @@
         margin-left: 0;
         border-left: 0;
       }
+
+      &:not(:first-child):not(:last-child) {
+        border-radius: 0;
+      }
     }
   }
 }
 
 
-// Card
+// Card columns
 // -------------------------
 
-@media(min-width: @screen-sm) {
+@media (min-width: @grid-float-breakpoint) {
   .card-columns {
     column-count: 3;
     column-gap: @padding-base-horizontal;
