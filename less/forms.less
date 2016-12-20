@@ -56,6 +56,48 @@ input[type="checkbox"] {
 
 input[type="file"] {
   display: block;
+  width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+
+  + label {
+    display: inline-block;
+    font-size: 1em;
+    padding: 6px 15px;
+    color: @btn-default-color;
+    background-color: @btn-default-bg;
+    border: 1px solid @btn-default-border;
+    border-radius: @btn-border-radius-base;
+    cursor: pointer;
+
+    &.file-primary {
+      color: @btn-primary-color;
+      background-color: @btn-primary-bg;
+      border-color: @btn-primary-border;
+    }
+  }
+
+  &:focus + label,
+  + label {
+    &:hover,
+    &:active,
+    &:focus {
+      color: @brand-primary;
+      border-color: @brand-primary;
+    }
+    &.file-primary {
+      &:hover,
+      &:active,
+      &:focus {
+        color: @btn-primary-color;
+        background-color: darken(@btn-primary-bg, 10%);
+        border-color: darken(@btn-primary-border, 25%);
+      }
+    }
+  }
 }
 
 // Make range inputs behave like textual form controls
@@ -70,7 +112,7 @@ select[size] {
   height: auto;
 }
 
-// Focus for file, radio, and checkbox
+// Focus for file
 input[type="file"]:focus {
   .tab-focus();
 }
@@ -88,10 +130,10 @@ input[type="radio"] + label {
   cursor: pointer;
 }
 input[type="checkbox"] + label {
-  padding: 0 0 0 30px;
+  padding: 0 0 0 35px;
 }
 input[type="radio"] + label {
-  padding: 0 0 0 18px;
+  padding: 0 0 0 23px;
 }
 input[type="checkbox"] + label:before,
 input[type="checkbox"] + label:after,
@@ -307,7 +349,6 @@ input[type="search"] {
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
   position: absolute;
-  margin-left: -20px;
   margin-top: 4px \9;
 }
 
@@ -343,6 +384,7 @@ input[type="checkbox"] {
   &.disabled,
   fieldset[disabled] & {
     cursor: @cursor-disabled;
+    opacity: 0.5;
   }
 }
 // These classes are used directly on <label>s
@@ -360,6 +402,7 @@ input[type="checkbox"] {
   fieldset[disabled] & {
     label {
       cursor: @cursor-disabled;
+      opacity: 0.5;
     }
   }
 }
@@ -524,7 +567,7 @@ input[type="checkbox"] {
   display: block; // account for any element using help-block
   margin-top: 5px;
   margin-bottom: 10px;
-  color: lighten(@text-color, 25%); // lighten the text some for contrast
+  color: @state-info-text; // set info text colour
 }
 
 
@@ -591,15 +634,6 @@ input[type="checkbox"] {
       margin-top: 0;
       margin-bottom: 0;
       vertical-align: middle;
-
-      label {
-        padding-left: 0;
-      }
-    }
-    .radio input[type="radio"],
-    .checkbox input[type="checkbox"] {
-      position: relative;
-      margin-left: 0;
     }
 
     // Re-override the feedback icon.

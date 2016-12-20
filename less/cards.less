@@ -13,10 +13,12 @@
   background-color: @card-bg;
   border: 1px solid rgb(221, 221, 221);
   border-radius: @card-border-radius;
+  overflow: hidden;
   .transition(all 0.3s ease-out);
   &:hover {
     border-color: rgb(238,238,238);
     .box-shadow(~'0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)');
+    z-index: 5;
   }
 }
 
@@ -29,7 +31,7 @@
 }
 
 .card-subtitle {
-  margin-top: -(@padding-large-vertical / 2);
+  margin-top: (0px - (@padding-large-vertical / 2));
   margin-bottom: 0;
 }
 
@@ -48,15 +50,27 @@
 }
 
 .card {
-  > .list-group:first-child {
-    .list-group-item:first-child {
-      .border-top-radius(@border-radius-large);
-    }
-  }
+  .list-group {
+    margin-bottom: 0;
 
-  > .list-group:last-child {
-    .list-group-item:last-child {
-      .border-bottom-radius(@border-radius-large);
+    .list-group-item {
+      border-radius: 0px;
+      border-right: none;
+      border-left: none;
+    }
+
+    &:first-child {
+      .list-group-item:first-child {
+        .border-top-radius(@border-radius-large);
+        border-top: none;
+      }
+    }
+
+    &:last-child {
+      .list-group-item:last-child {
+        .border-bottom-radius(@border-radius-large);
+        border-bottom: none;
+      }
     }
   }
 }
@@ -95,15 +109,15 @@
 // -------------------------
 
 .card-header-tabs {
-  margin-right: -(@padding-base-horizontal / 2);
-  margin-bottom: -(@padding-large-vertical);
-  margin-left: -(@padding-base-horizontal / 2);
+  margin-right: (0px - (@padding-base-horizontal / 2));
+  margin-bottom: (0px - (@padding-large-vertical));
+  margin-left: (0px - (@padding-base-horizontal / 2));
   border-bottom: 0;
 }
 
 .card-header-pills {
-  margin-right: -(@padding-base-horizontal / 2);
-  margin-left: -(@padding-base-horizontal / 2);
+  margin-right: (0px - (@padding-base-horizontal / 2));
+  margin-left: (0px - (@padding-base-horizontal / 2));
 }
 
 
@@ -130,7 +144,7 @@
 // -------------------------
 
 .card-outline-primary {
-  .card-outline-variant(@card-primary-border);
+  .card-outline-variant(@card-brand-border);
 }
 .card-outline-info {
   .card-outline-variant(@card-info-border);
@@ -229,8 +243,28 @@
         border-left: 0;
       }
 
+      &:first-child {
+        .border-right-radius(0px);
+        .card-img-top,
+        .card-img-bottom {
+          .border-right-radius(0px);
+        }
+      }
+
+      &:last-child {
+        .border-left-radius(0px);
+        .card-img-top,
+        .card-img-bottom {
+          .border-left-radius(0px);
+        }
+      }
+
       &:not(:first-child):not(:last-child) {
-        border-radius: 0;
+        border-radius: 0px;
+        .card-img-top,
+        .card-img-bottom {
+          border-radius: 0px;
+        }
       }
     }
   }

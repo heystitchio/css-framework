@@ -14,14 +14,13 @@
         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
       </div>
       <div class="form-group">
+        <input type="file" name="exampleInputFile" id="exampleInputFile" class="input-file" data-multiple-caption="{count} files selected" multiple>
         <label for="exampleInputFile">File input</label>
-        <input type="file" id="exampleInputFile">
         <p class="help-block">Example block-level help text here.</p>
       </div>
       <div class="checkbox">
-        <label>
-          <input type="checkbox"> Check me out
-        </label>
+        <input type="checkbox" id="checkMeOut">
+        <label for="checkMeOut">Check me out</label>
       </div>
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
@@ -37,14 +36,13 @@
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
   <div class="form-group">
-    <label for="exampleInputFile">File input</label>
     <input type="file" id="exampleInputFile">
+    <label for="exampleInputFile">File input</label>
     <p class="help-block">Example block-level help text here.</p>
   </div>
   <div class="checkbox">
-    <label>
-      <input type="checkbox"> Check me out
-    </label>
+    <input type="checkbox" id="checkMeOut">
+    <label for="checkMeOut">Check me out</label>
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
@@ -104,9 +102,8 @@
         <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
       </div>
       <div class="checkbox">
-        <label>
-          <input type="checkbox"> Remember me
-        </label>
+        <input type="checkbox" id="rememberMe5">
+        <label for="rememberMe5">Remember me</label>
       </div>
       <button type="submit" class="btn btn-default">Sign in</button>
     </form>
@@ -122,9 +119,8 @@
     <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
   </div>
   <div class="checkbox">
-    <label>
-      <input type="checkbox"> Remember me
-    </label>
+    <input type="checkbox" id="rememberMe">
+    <label for="rememberMe">Remember me</label>
   </div>
   <button type="submit" class="btn btn-default">Sign in</button>
 </form>
@@ -176,9 +172,8 @@
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
           <div class="checkbox">
-            <label>
-              <input type="checkbox"> Remember me
-            </label>
+            <input type="checkbox" id="rememberMe2">
+            <label for="rememberMe2">Remember me</label>
           </div>
         </div>
       </div>
@@ -206,9 +201,8 @@
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <div class="checkbox">
-        <label>
-          <input type="checkbox"> Remember me
-        </label>
+        <input type="checkbox" id="rememberMe">
+        <label for="rememberMe">Remember me</label>
       </div>
     </div>
   </div>
@@ -261,69 +255,49 @@
   <div class="bs-example" data-example-id="block-checkboxes-radios">
     <form>
       <div class="checkbox">
-        <label>
-          <input type="checkbox" value="">
-          Option one is this and that&mdash;be sure to include why it's great
-        </label>
+        <input type="checkbox" id="checkbox1" value="">
+        <label for="checkbox1">Option one is this and that&mdash;be sure to include why it's great</label>
       </div>
       <div class="checkbox disabled">
-        <label>
-          <input type="checkbox" value="" disabled>
-          Option two is disabled
-        </label>
+        <input type="checkbox" id="checkbox2" value="" disabled>
+        <label for="checkbox2">Option two is disabled</label>
       </div>
       <br>
       <div class="radio">
-        <label>
-          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-          Option one is this and that&mdash;be sure to include why it's great
-        </label>
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        <label for="optionsRadios1">Option one is this and that&mdash;be sure to include why it's great</label>
       </div>
       <div class="radio">
-        <label>
-          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-          Option two can be something else and selecting it will deselect option one
-        </label>
+        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+        <label for="optionsRadios2">Option two can be something else and selecting it will deselect option one</label>
       </div>
       <div class="radio disabled">
-        <label>
-          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-          Option three is disabled
-        </label>
+        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+        <label for="optionsRadios3">Option three is disabled</label>
       </div>
     </form>
   </div><!-- /.bs-example -->
 {% highlight html %}
 <div class="checkbox">
-  <label>
-    <input type="checkbox" value="">
-    Option one is this and that&mdash;be sure to include why it's great
-  </label>
+  <input type="checkbox" id="optionsCheckbox1" value="">
+  <label for="optionsCheckbox1">Option one is this and that&mdash;be sure to include why it's great</label>
 </div>
 <div class="checkbox disabled">
-  <label>
-    <input type="checkbox" value="" disabled>
-    Option two is disabled
-  </label>
+  <input type="checkbox" id="optionsCheckbox2" value="" disabled>
+  <label for="optionsCheckbox2">Option two is disabled</label>
 </div>
 
 <div class="radio">
-  <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-    Option one is this and that&mdash;be sure to include why it's great
-  </label>
+  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+  <label for="optionsRadios1">Option one is this and that&mdash;be sure to include why it's great</label>
 </div>
 <div class="radio">
-  <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-    Option two can be something else and selecting it will deselect option one
-  </label>
+  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+  <label for="optionsRadios2">Option two can be something else and selecting it will deselect option one</label>
 </div>
 <div class="radio disabled">
-  <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-    Option three is disabled
-  </label>
+  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+  <label for="optionsRadios3">Option three is disabled</label>
 </div>
 {% endhighlight %}
 
@@ -331,49 +305,61 @@
   <p>Use the <code>.checkbox-inline</code> or <code>.radio-inline</code> classes on a series of checkboxes or radios for controls that appear on the same line.</p>
   <div class="bs-example" data-example-id="inline-checkboxes-radios">
     <form>
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
-      </label>
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
-      </label>
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
-      </label>
+      <div class="checkbox-inline">
+        <input type="checkbox" id="inlineCheckbox1" value="option1">
+        <label for="inlineCheckbox1">1</label>
+      </div>
+      <div class="checkbox-inline">
+        <input type="checkbox" id="inlineCheckbox2" value="option2">
+        <label for="inlineCheckbox2">2</label>
+      </div>
+      <div class="checkbox-inline">
+        <input type="checkbox" id="inlineCheckbox3" value="option3">
+        <label for="inlineCheckbox3">3</label>
+      </div>
     </form>
     <br>
     <form>
-      <label class="radio-inline">
-        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-      </label>
-      <label class="radio-inline">
-        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-      </label>
-      <label class="radio-inline">
-        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-      </label>
+      <div class="radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label for="inlineRadio1">1</label>
+      </div>
+      <div class="radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label for="inlineRadio2">2</label>
+      </div>
+      <div class="radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+        <label for="inlineRadio3">3</label>
+      </div>
     </form>
   </div><!-- /.bs-example -->
 {% highlight html %}
-<label class="checkbox-inline">
-  <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
-</label>
-<label class="checkbox-inline">
-  <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
-</label>
-<label class="checkbox-inline">
-  <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
-</label>
+<div class="checkbox-inline">
+  <input type="checkbox" id="inlineCheckbox1" value="option1">
+  <label for="inlineCheckbox1">1</label>
+</div>
+<div class="checkbox-inline">
+  <input type="checkbox" id="inlineCheckbox2" value="option2">
+  <label for="inlineCheckbox2">2</label>
+</div>
+<div class="checkbox-inline">
+  <input type="checkbox" id="inlineCheckbox3" value="option3">
+  <label for="inlineCheckbox3">3</label>
+</div>
 
-<label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-</label>
-<label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-</label>
-<label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-</label>
+<div class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+  <label for="inlineRadio1">1</label>
+</div>
+<div class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+  <label for="inlineRadio2">2</label>
+</div>
+<div class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+  <label for="inlineRadio3">3</label>
+</div>
 {% endhighlight %}
 
   <h4>Checkboxes and radios without label text</h4>
@@ -381,27 +367,23 @@
   <div class="bs-example" data-example-id="checkboxes-radios-without-labels">
     <form>
       <div class="checkbox">
-        <label>
-          <input type="checkbox" id="blankCheckbox" value="option1" aria-label="Checkbox without label text">
-        </label>
+        <input type="checkbox" id="blankCheckbox" value="option1" aria-label="Checkbox without label text">
+        <label for="blankCheckbox"></label>
       </div>
       <div class="radio">
-        <label>
-          <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="Radio button without label text">
-        </label>
+        <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="Radio button without label text">
+        <label for="blankRadio1"></label>
       </div>
     </form>
   </div>
 {% highlight html %}
 <div class="checkbox">
-  <label>
-    <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-  </label>
+  <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+  <label for="blankCheckbox"></label>
 </div>
 <div class="radio">
-  <label>
-    <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
-  </label>
+  <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+  <label for="blankRadio1"></label>
 </div>
 {% endhighlight %}
 
@@ -1026,4 +1008,3 @@
   </div>
 </div>
 {% endhighlight %}
-

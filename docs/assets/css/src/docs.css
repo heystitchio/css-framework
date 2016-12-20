@@ -690,22 +690,22 @@ h1[id] {
 
 /* Variations */
 .bs-callout-danger {
-  border-left-color: #ce4844;
+  border-left-color: rgb(238, 63, 74);
 }
 .bs-callout-danger h4 {
-  color: #ce4844;
+  color: rgb(238, 63, 74);
 }
 .bs-callout-warning {
-  border-left-color: #aa6708;
+  border-left-color: rgb(245, 215, 110);
 }
 .bs-callout-warning h4 {
-  color: #aa6708;
+  color: rgb(1, 22, 39);
 }
 .bs-callout-info {
-  border-left-color: #1b809e;
+  border-left-color: rgb(116, 141, 163);
 }
 .bs-callout-info h4 {
-  color: #1b809e;
+  color: rgb(116, 141, 163);
 }
 
 
@@ -920,6 +920,10 @@ h1[id] {
 
 .bs-example .card {
   max-width: 320px;
+}
+
+.bs-example .col-sm-6 .card {
+  max-width: 100%;
 }
 
 /* Tweak content of examples for optimum awesome */
