@@ -292,8 +292,8 @@ th {
   font-style: normal;
   font-weight: normal;
 
-  src: url("https://file.myfontastic.com/T4S3xZmdtZ32ov9ofQ2jvR/fonts/1480503676.eot");
-  src: url("https://file.myfontastic.com/T4S3xZmdtZ32ov9ofQ2jvR/fonts/1480503676.eot?#iefix") format("embedded-opentype"), url("https://file.myfontastic.com/T4S3xZmdtZ32ov9ofQ2jvR/fonts/1480503676.woff") format("woff"), url("https://file.myfontastic.com/T4S3xZmdtZ32ov9ofQ2jvR/fonts/1480503676.ttf") format("truetype"), url("https://file.myfontastic.com/T4S3xZmdtZ32ov9ofQ2jvR/fonts/1480503676.svg#1480503676") format("svg");
+  src: url("https://cdn.heystitch.io/web/common/fonts/icons/icons.eot");
+  src: url("https://cdn.heystitch.io/web/common/fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("https://cdn.heystitch.io/web/common/fonts/icons/icons.woff") format("woff"), url("https://cdn.heystitch.io/web/common/fonts/icons/icons.woff2") format("woff2"), url("https://cdn.heystitch.io/web/common/fonts/icons/icons.ttf") format("truetype"), url("https://cdn.heystitch.io/web/common/fonts/icons/icons.svg#1480503676") format("svg");
 }
 [data-icon]:before {
   display: inline-block;
@@ -721,15 +721,6 @@ th {
 .icon-blocked:before {
   content: "\e023";
 }
-.icon-android:before {
-  content: "\e024";
-}
-.icon-apple:before {
-  content: "\e025";
-}
-.icon-youtube-play:before {
-  content: "\e027";
-}
 .icon-shield:before {
   content: "\e026";
 }
@@ -787,23 +778,77 @@ th {
 .icon-font:before {
   content: "\e039";
 }
-.icon-linkedin:before {
-  content: "\e03b";
-}
-.icon-twitter:before {
-  content: "\e03c";
-}
-.icon-github:before {
-  content: "\e03d";
-}
-.icon-windows:before {
-  content: "\e03a";
-}
-.icon-facebook:before {
-  content: "\e03e";
-}
 .icon-angle-down:before {
   content: "\e03f";
+}
+.icon-apple-1:before {
+  content: "\e040";
+}
+.icon-windows:before {
+  content: "\e041";
+}
+.icon-xbox:before {
+  content: "\e042";
+}
+.icon-vimeo:before {
+  content: "\e043";
+}
+.icon-youtube:before {
+  content: "\e044";
+}
+.icon-instagram:before {
+  content: "\e045";
+}
+.icon-github:before {
+  content: "\e046";
+}
+.icon-behance:before {
+  content: "\e047";
+}
+.icon-facebook:before {
+  content: "\e048";
+}
+.icon-googleplus:before {
+  content: "\e049";
+}
+.icon-linkedin:before {
+  content: "\e04a";
+}
+.icon-reddit:before {
+  content: "\e04b";
+}
+.icon-android:before {
+  content: "\e04c";
+}
+.icon-playstation:before {
+  content: "\e04d";
+}
+.icon-twitter:before {
+  content: "\e04e";
+}
+.icon-snapchat:before {
+  content: "\e04f";
+}
+.icon-pinterest:before {
+  content: "\e050";
+}
+.icon-skype:before {
+  content: "\e051";
+}
+.icon-imdb:before {
+  content: "\e052";
+}
+.icon-medium:before {
+  content: "\e053";
+}
+.icon-steam:before {
+  content: "\e054";
+}
+.icon-dribbble:before {
+  content: "\e055";
+}
+.icon-googleplay:before {
+  content: "\e056";
 }
 * {
   -webkit-box-sizing: border-box;
@@ -916,16 +961,16 @@ hr {
   font-style: normal;
   font-weight: 800;
 
-  src: url('http://assets.heystitch.io/fonts/nexa-bold.eot');
-  src: url('http://assets.heystitch.io/fonts/nexa-bold.eot?#iefix') format('embedded-opentype'), url('http://assets.heystitch.io/fonts/nexa-bold.woff') format("woff"), url('http://assets.heystitch.io/fonts/nexa-bold.ttf') format('truetype'), url('http://assets.heystitch.io/fonts/nexa-bold.svg#1480503676') format('svg');
+  src: url('https://cdn.heystitch.io/web/common/fonts/nexa/nexa-bold.eot');
+  src: url('https://cdn.heystitch.io/web/common/fonts/nexa/nexa-bold.eot?#iefix') format('embedded-opentype'), url('https://cdn.heystitch.io/web/common/fonts/nexa/nexa-bold.woff') format("woff"), url('https://cdn.heystitch.io/web/common/fonts/nexa/nexa-bold.woff2') format("woff2"), url('https://cdn.heystitch.io/web/common/fonts/nexa/nexa-bold.ttf') format('truetype'), url('https://cdn.heystitch.io/web/common/fonts/nexa/nexa-bold.svg#1480503676') format('svg');
 }
 @font-face {
   font-family: 'Nexa';
   font-style: normal;
   font-weight: 300;
 
-  src: url('http://assets.heystitch.io/fonts/nexa-light.eot');
-  src: url('http://assets.heystitch.io/fonts/nexa-light.eot?#iefix') format('embedded-opentype'), url('http://assets.heystitch.io/fonts/nexa-light.woff') format("woff"), url('http://assets.heystitch.io/fonts/nexa-light.ttf') format('truetype'), url('http://assets.heystitch.io/fonts/nexa-light.svg#1480503676') format('svg');
+  src: url('https://cdn.heystitch.io/web/common/fonts/nexa/nexa-light.eot');
+  src: url('https://cdn.heystitch.io/web/common/fonts/nexa/nexa-light.eot?#iefix') format('embedded-opentype'), url('https://cdn.heystitch.io/web/common/fonts/nexa/nexa-light.woff') format("woff"), url('https://cdn.heystitch.io/web/common/fonts/nexa/nexa-light.woff2') format("woff2"), url('https://cdn.heystitch.io/web/common/fonts/nexa/nexa-light.ttf') format('truetype'), url('https://cdn.heystitch.io/web/common/fonts/nexa/nexa-light.svg#1480503676') format('svg');
 }
 h1,
 h2,
@@ -2435,8 +2480,6 @@ output {
 .form-control:focus {
   border-color: #39f;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(51, 153, 255, .6);
-          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(51, 153, 255, .6);
 }
 .form-control::-moz-placeholder {
   color: #b4b4b4;
@@ -4100,7 +4143,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   min-height: 60px;
   margin-bottom: 20px;
-  border: 1px solid transparent;
+  border-bottom: 1px solid transparent;
 }
 @media (min-width: 768px) {
   .navbar-header {
@@ -4207,7 +4250,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   height: 60px;
   padding: 15px 15px;
   font-family: 'Nexa';
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 800;
   line-height: 20px;
 }
@@ -4291,21 +4334,16 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin: 10px -15px;
 }
 .navbar-nav > li > a {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 5px 15px;
+  margin: 13px 5px;
   font-weight: 600;
-  line-height: 20px;
+  border: 2px solid transparent;
+  border-radius: 4px;
 }
-.navbar-nav > li > a:hover:before,
-.navbar-nav > li > a:focus:before {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  width: -webkit-calc(100% - 30px);
-  width:         calc(100% - 30px);
-  height: 2px;
-  content: '';
-  background: #39f;
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+  color: #011627;
+  border-color: #011627;
 }
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
@@ -4337,10 +4375,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-nav > li {
     float: left;
-  }
-  .navbar-nav > li > a {
-    padding-top: 20px;
-    padding-bottom: 20px;
   }
 }
 .navbar-form {
@@ -4424,8 +4458,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-bottom: -8px;
 }
 .navbar-btn {
-  margin-top: 13px;
-  margin-bottom: 13px;
+  padding: 5px  15px;
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
 .navbar-btn.btn-sm {
   margin-top: 15px;
@@ -4434,6 +4469,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-btn.btn-xs {
   margin-top: 19px;
   margin-bottom: 19px;
+}
+.navbar-btn-icon {
+  padding: 2px 15px;
 }
 .navbar-text {
   margin-top: 20px;
@@ -4479,7 +4517,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #39f;
+  color: #011627;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
@@ -4516,7 +4554,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #39f;
+    color: #011627;
     background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
@@ -4536,14 +4574,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #51677a;
 }
 .navbar-default .navbar-link:hover {
-  color: #39f;
+  color: #011627;
 }
 .navbar-default .btn-link {
   color: #51677a;
 }
 .navbar-default .btn-link:hover,
 .navbar-default .btn-link:focus {
-  color: #39f;
+  color: #011627;
 }
 .navbar-default .btn-link[disabled]:hover,
 fieldset[disabled] .navbar-default .btn-link:hover,

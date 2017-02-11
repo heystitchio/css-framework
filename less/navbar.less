@@ -12,7 +12,7 @@
   position: relative;
   min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: @navbar-margin-bottom;
-  border: 1px solid transparent;
+  border-bottom: 1px solid transparent;
 
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
@@ -166,7 +166,7 @@
   float: left;
   padding: 15px @navbar-padding-horizontal;
   font-family: 'Nexa';
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 800;
   line-height: @line-height-computed;
   height: @navbar-height;
@@ -273,21 +273,15 @@
   margin: (@navbar-padding-vertical / 2) -@navbar-padding-horizontal;
 
   > li > a {
-    padding-top:    10px;
-    padding-bottom: 10px;
-    line-height: @line-height-computed;
+    margin: 13px 5px;
+    padding: 5px 15px;
     font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: @btn-border-radius-base;
     &:hover,
     &:focus {
-      &:before {
-        content: '';
-        position: absolute;
-        bottom: 15px;
-        left: 15px;
-        height: 2px;
-        width: ~'calc(100% - 30px)';
-        background: @brand-primary;
-      }
+      color: @text-color;
+      border-color: @text-color;
     }
   }
 
@@ -322,10 +316,6 @@
 
     > li {
       float: left;
-      > a {
-        padding-top:    @navbar-padding-vertical;
-        padding-bottom: @navbar-padding-vertical;
-      }
     }
   }
 }
@@ -393,7 +383,9 @@
 // Vertically center a button within a navbar (when *not* in a form).
 
 .navbar-btn {
-  .navbar-vertical-align(@input-height-base);
+  padding: 5px  15px;
+  margin-top: 14px;
+  margin-bottom: 14px;
 
   &.btn-sm {
     .navbar-vertical-align(@input-height-small);
@@ -401,6 +393,10 @@
   &.btn-xs {
     .navbar-vertical-align(22);
   }
+}
+
+.navbar-btn-icon {
+  padding: 2px 15px;
 }
 
 
